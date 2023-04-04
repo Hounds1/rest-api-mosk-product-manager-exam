@@ -1,0 +1,11 @@
+package mosk.product.io.exam.manager.domain.repository;
+
+import mosk.product.io.exam.manager.domain.model.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface ProductRepository extends JpaRepository<Product, Long> {
+
+    Optional<Product> findByName(final String name);
+}
